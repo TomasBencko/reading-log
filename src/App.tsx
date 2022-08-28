@@ -5,8 +5,8 @@ export default function App() {
 
   return (
     <>
-			<AppHeader />
 			<AppPage />
+			<AppHeader />
     </>
   )
 }

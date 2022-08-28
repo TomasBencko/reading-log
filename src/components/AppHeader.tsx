@@ -1,11 +1,20 @@
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBookOpenReader, faGear } from '@fortawesome/free-solid-svg-icons'
+import './appHeader.scss'
+
 export default function AppHeader() {
 
 	return (
-		<div id="AppHeader" className="w-full py-2 border-b">
-			<h1 className="text-3xl font-bold flex justify-center my-3 bgsla">
-				<img src="/appIcon.svg" className="w-6 inline-block mr-2" />
-				<span>Reading Log</span>
-			</h1>
+		<div id="AppHeader">
+      <div id="toolbar">
+        <h1>
+          {/* <img src="/appIcon.svg" className="w-6 inline-block mr-2" /> */}
+          {/* <FontAwesomeIcon className="faIcon" icon={faBookOpenReader} /> */}
+          <span>Reading Log</span>
+        </h1>
+        <FontAwesomeIcon className="faIcon" icon={faGear} />
+      </div>
 		</div>
 	)
 }

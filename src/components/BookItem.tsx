@@ -1,3 +1,10 @@
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckCircle, faStar } from '@fortawesome/free-solid-svg-icons'
+
+
+
+
 export default function BookItem({ bookData }) {
 
 	// Computed variables
@@ -7,6 +14,7 @@ export default function BookItem({ bookData }) {
 
 	const pageCount = bookData.pageCount
 	const pagesRead = sessions.reduce((prev, cur) => prev + cur.pagesRead, 0)
+	const pagesLeft = pageCount - pagesRead
 	const completion = Math.round(pagesRead / pageCount * 100)
 
 	const readTime = Math.round(sessions.reduce((prev, cur) => prev + cur.readTime, 0) * 10) / 10
@@ -23,20 +31,41 @@ export default function BookItem({ bookData }) {
   ))
 
 	return (
-		<div className="bg-white pb-3 border-b rounded-md flex overflow-hidden mb-5 last:mb-0 last:border-b-0">
-			<img src={bookData.thumbnail} className="object-cover w-16 h-24 object-top shrink-0"/>
-			<div className="pl-3 overflow-hidden">
-				<h2 className="text-xl font-bold">{bookData.title}</h2>
-				<p className="whitespace-nowrap overflow-hidden text-ellipsis">{authors}</p>
+		<div className="BookItem">
+			<img src={bookData.thumbnail}/>
+			<div className='bookItem--info'>
+
+        <div className='bookItem--title'>
+          
+				  <h4 className='bookItem--title-text'>
+            <FontAwesomeIcon className="faIcon icon__flag" icon={faCheckCircle} />
+            {bookData.title}
+          </h4>
+          <span className='bookItem--title-rating'>
+            4/5
+            <FontAwesomeIcon className="faIcon icon__star" icon={faStar} />
+          </span>
+        </div>
+
+				{/* <p>{authors}</p> */}
+
 				{/* <p>Read time: <strong>{readTime}</strong>, remaining: <strong>{remainingTime}</strong></p> */}
+				{/* <p>Read time: <strong>{readTime}h</strong> (<strong>{remainingTime}h</strong> remaining)</p> */}
 				{/* <p><strong>{remainingPages}</strong> pages remains ({remainingTime}h)</p> */}
 				{/* <p><strong>{completion}%</strong> done</p> */}
-				{/* <p>Read time: <strong>{readTime}h</strong> (<strong>{remainingTime}h</strong> remaining)</p> */}
-				<p><strong>{completion}%</strong> done; <strong>{remainingTime}h</strong>  remaining</p>
-				<p><span className="rounded bg-slate-200 py-0.5 px-1 text-xs">{bookData.tags}</span></p>
+				{/* <p><strong>{completion}%</strong> done; <strong>{remainingTime}</strong> h / <strong>{pagesLeft}</strong> p remains</p> */}
+				{/* <p><strong>{completion}%</strong> completed</p> */}
+				{/* <p><strong>{readTime}h</strong> read, <strong>{remainingTime}h</strong> remains</p> */}
+				{/* <p><strong>{completion}%</strong> done; <strong>{pagesRead}/{pageCount}</strong> pages read</p> */}
+				{/* <p><strong>{pagesLeft}</strong> pages / <strong>{remainingTime}</strong> h remains</p> */}
+				{/* <p><strong>{remainingTime}</strong> h remains ({pagesLeft} / {pageCount} pages)</p> */}
+				<p><strong>{remainingTime}</strong> hours remains</p>
+				{/* <p><strong>{completion}%</strong> done; <strong>{remainingTime}h</strong> remaining</p> */}
+
+				<div className="tag">{bookData.tags}</div>
 			</div>
 
-			{/* <hr className="my-3" />
+			{/* <hr className="my-4" />
 
 			<h3 className="text-lg text-center font-semibold">Reading sessions ({numberOfSessions})</h3>
 			{sessionItems} */}
