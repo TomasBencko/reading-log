@@ -34,8 +34,29 @@
 
 /* IOS LIGHT THEME */
 :root {
-  --ion-background-color: #ffffff;
-  --ion-background-color-rgb: 255,255,255;
+
+  --ios-color-red: #FF3B30;
+  --ios-color-orange: #FF9500;
+  --ios-color-yellow: #FFCC00;
+  --ios-color-green: #34C759;
+  --ios-color-mint: #00C7BE;
+  --ios-color-teal: #30B0C7;
+  --ios-color-cyan: #32ADE6;
+  --ios-color-blue: #007AFF;
+  --ios-color-indigo: #5856D6;
+  --ios-color-purple: #AF52DE;
+  --ios-color-pink: #FF2D55;
+  --ios-color-brown: #A2845E;
+
+  --ios-color-gray: #8E8E93;
+  --ios-color-gray-2: #AEAEB2;
+  --ios-color-gray-3: #C7C7CC;
+  --ios-color-gray-4: #D1D1D6;
+  --ios-color-gray-5: #E5E5EA;
+  --ios-color-gray-6: #F2F2F7;
+
+  --ion-color-background: #ffffff;
+  --ion-color-background-rgb: 255,255,255;
 
   --ion-text-color: #000000;
   --ion-text-color-rgb: 0,0,0;
@@ -69,15 +90,36 @@
   // --ion-border-color: #efeff2;
 
   ion-modal {
-    --ion-background-color: var(--ion-color-step-100);
+    --ion-color-background: var(--ion-color-step-100);
   }
 }
 
 /* IOS DARK THEME */
 @media (prefers-color-scheme: dark) {
   :root {
-    --ion-background-color: #000000;
-    --ion-background-color-rgb: 0,0,0;
+
+    --ios-color-red: #FF453A;
+    --ios-color-orange: #FF9F0A;
+    --ios-color-yellow: #FFD60A;
+    --ios-color-green: #30D158;
+    --ios-color-mint: #66D4CF;
+    --ios-color-teal: #40C8E0;
+    --ios-color-cyan: #64D2FF;
+    --ios-color-blue: #0A84FF;
+    --ios-color-indigo: #5E5CE6;
+    --ios-color-purple: #BF5AF2;
+    --ios-color-pink: #FF375F;
+    --ios-color-brown: #AC8E68;
+
+    --ios-color-gray: #8E8E93;
+    --ios-color-gray-2: #636366;
+    --ios-color-gray-3: #48484A;
+    --ios-color-gray-4: #3A3A3C;
+    --ios-color-gray-5: #2C2C2E;
+    --ios-color-gray-6: #1C1C1E;
+
+    --ion-color-background: #000000;
+    --ion-color-background-rgb: 0,0,0;
 
     --ion-text-color: #ffffff;
     --ion-text-color-rgb: 255,255,255;
@@ -110,7 +152,7 @@
     --ion-border-color: var(--ion-color-step-250); // New
     
     ion-modal {
-      --ion-background-color: var(--ion-color-step-100);
+      --ion-color-background: var(--ion-color-step-100);
     }
   }
 }

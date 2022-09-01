@@ -16,32 +16,33 @@ const books = [
 
 		// User defined
 		categories: [],
-		tags: [ 'World' ],
+		tags: [ 'World', 'Science' ],
 		boughtForPrice: '',
 		startsOnPage: 0,
 		endsOnPage: 281,
-		isCompleted: false,
-		userRating: 4.5,
+		isFinished: true,
+		userRating: 5,
+    priority: 0,
 
 		/* SESSIONS */
 		sessions: [
 			{
 				date: '2022-08-26',
-				pagesRead: 20,
+				pagesRead: 164,
 				readTime: 0.78,
 				energy: .65,
 				enjoyment: .8,
 			},
 			{
 				date: '2022-08-25',
-				pagesRead: 18,
+				pagesRead: 150,
 				readTime: 0.56,
 				energy: .6,
 				enjoyment: .7,
 			},
 			{
 				date: '2022-08-22',
-				pagesRead: 27,
+				pagesRead: 150,
 				readTime: 1.07,
 				energy: .73,
 				enjoyment: .92,
@@ -69,28 +70,29 @@ const books = [
 		boughtForPrice: '',
 		startsOnPage: 0,
 		endsOnPage: 281,
-		isCompleted: false,
-		userRating: 4.5,
+		isFinished: false,
+		userRating: 3.5,
+    priority: 3,
 
 		/* SESSIONS */
 		sessions: [
 			{
 				date: '2022-08-26',
-				pagesRead: 20,
+				pagesRead: 70,
 				readTime: 0.78,
 				energy: .65,
 				enjoyment: .8,
 			},
 			{
 				date: '2022-08-25',
-				pagesRead: 18,
+				pagesRead: 45,
 				readTime: 0.56,
 				energy: .6,
 				enjoyment: .7,
 			},
 			{
 				date: '2022-08-22',
-				pagesRead: 27,
+				pagesRead: 68,
 				readTime: 1.07,
 				energy: .73,
 				enjoyment: .92,
@@ -118,8 +120,9 @@ const books = [
 		boughtForPrice: '',
 		startsOnPage: 0,
 		endsOnPage: 281,
-		isCompleted: false,
-		userRating: 4.5,
+		isFinished: false,
+		userRating: 3,
+    priority: 2,
 
 		/* SESSIONS */
 		sessions: [
@@ -155,7 +158,7 @@ const books = [
 		pageCount: 592,
 		language: 'en',
 		yearPublished: 2018,
-		thumbnail: "http://books.google.com/books/content?id=qNNmDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+		thumbnail: '',
 
 		// GoodReads API
 		averageRating: 3.87,
@@ -163,32 +166,33 @@ const books = [
 
 		// User defined
 		categories: [],
-		tags: [ 'Productivity' ],
+		tags: [ 'Productivity', 'Biography' ],
 		boughtForPrice: '',
 		startsOnPage: 0,
 		endsOnPage: 281,
-		isCompleted: false,
-		userRating: 4.5,
+		isFinished: false,
+		userRating: 2.5,
+    priority: 1,
 
 		/* SESSIONS */
 		sessions: [
 			{
 				date: '2022-08-26',
-				pagesRead: 20,
+				pagesRead: 80,
 				readTime: 0.78,
 				energy: .65,
 				enjoyment: .8,
 			},
 			{
 				date: '2022-08-25',
-				pagesRead: 18,
+				pagesRead: 150,
 				readTime: 0.56,
 				energy: .6,
 				enjoyment: .7,
 			},
 			{
 				date: '2022-08-22',
-				pagesRead: 27,
+				pagesRead: 70,
 				readTime: 1.07,
 				energy: .73,
 				enjoyment: .92,
@@ -216,8 +220,9 @@ const books = [
 		boughtForPrice: '',
 		startsOnPage: 0,
 		endsOnPage: 281,
-		isCompleted: false,
-		userRating: 4.5,
+		isFinished: false,
+		userRating: 0,
+    priority: -1,
 
 		/* SESSIONS */
 		sessions: [

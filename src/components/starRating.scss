@@ -1,0 +1,31 @@
+
+.StarRating {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-medium);
+
+  .StarRating--star {
+    font-size: .75em;
+    margin-left: .05em;
+    position: relative;
+    
+    display: flex;
+    
+    .StarRating--star__full {
+      color: var(--ios-color-yellow);
+    }
+    .StarRating--star__half-right {
+      color: var(--ios-color-yellow);
+      clip-path: inset(0 50% 0 0); // Only render right half of SVG
+    }
+    .StarRating--star__half-left {
+      color: var(--ios-color-gray-5);
+      clip-path: inset(0 0 0 50%); // Only render left half of SVG
+      position: absolute; // Render SVG on top of its sibling
+      top: 0; left: 0;
+    }
+    .StarRating--star__empty {
+      color: var(--ios-color-gray-5);
+    }
+  }
+}

@@ -1,11 +1,10 @@
 import BookItem from './BookItem'
 import placeholderData from '../services/placeholderData'
-import './bookList.scss'
 
 const bookData = placeholderData
 
 const bookItems = bookData.map(book => (
-	<BookItem bookData={book} />
+	<BookItem bookData={book} key={book.googleID} />
 ))
 
 export default function BookList() {
