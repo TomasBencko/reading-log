@@ -1,19 +1,24 @@
 
+import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBookOpenReader, faGear } from '@fortawesome/free-solid-svg-icons'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import './appHeader.scss'
 
 export default function AppHeader() {
 
+  let navigate = useNavigate()
+  function navigateHome() { navigate('/') }
+  function navigateAdd() { navigate('/add') }
+
 	return (
 		<div id="AppHeader">
       <div id="toolbar">
-        <h1>
-          {/* <img src="/appIcon.svg" className="w-6 inline-block mr-2" /> */}
-          {/* <FontAwesomeIcon className="faIcon" icon={faBookOpenReader} /> */}
+        <h1 onClick={navigateHome}>
           <span>Reading Log</span>
         </h1>
-        <FontAwesomeIcon className="faIcon" icon={faGear} />
+        <FontAwesomeIcon className="faIcon" icon={faPlus} 
+          onClick={navigateAdd}
+        />
       </div>
 		</div>
 	)

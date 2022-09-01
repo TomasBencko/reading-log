@@ -1,6 +1,7 @@
 const books = [
 	{
 		googleID: 'FmyBAwAAQBAJ',
+    urlSlug: 'sapiens',
 
 		// Google API
 		title: 'Sapiens', 
@@ -51,6 +52,7 @@ const books = [
 	},
 	{
 		googleID: 'ICSpCwAAQBAJ',
+    urlSlug: 'sprint',
 
 		// Google API
 		title: 'Sprint', 
@@ -101,6 +103,7 @@ const books = [
 	},
 	{
 		googleID: 'aci_Ea4c6woC',
+    urlSlug: 'creativity',
 
 		// Google API
 		title: 'Creativity', 
@@ -151,6 +154,7 @@ const books = [
 	},
 	{
 		googleID: 'qNNmDwAAQBAJ',
+    urlSlug: 'principles',
 
 		// Google API
 		title: 'Principles', 
@@ -201,6 +205,7 @@ const books = [
 	},
 	{
 		googleID: '_LFSBgAAQBAJ',
+    urlSlug: 'elon-musk',
 
 		// Google API
 		title: 'Elon Musk', 

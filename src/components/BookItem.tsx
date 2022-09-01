@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faBookOpen, faCircleExclamation, faCircleQuestion } from '@fortawesome/free-solid-svg-icons'
 // import {  } from '@fortawesome/free-regular-svg-icons'
 
+import { useNavigate } from 'react-router-dom'
 import { decimalToHours } from '../common/formatingHelpers'
 
 import moment from 'moment'
@@ -14,6 +15,9 @@ import './bookItem.scss'
 
 
 export default function BookItem({ bookData }) {
+
+  let navigate = useNavigate()
+  function navigateBook() { navigate(`/book/${bookData.urlSlug}`) }
 
 	// Computed variables
 	const sessions = bookData.sessions
@@ -72,7 +76,9 @@ export default function BookItem({ bookData }) {
 
 
 	return (
-		<div className="BookItem">
+		<div className="BookItem"
+      onClick={navigateBook}
+    >
 
       {/* Book thumbnail */}
       {bookData.thumbnail ? (
