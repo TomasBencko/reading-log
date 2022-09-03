@@ -1,0 +1,31 @@
+
+.BookProgress {
+  align-self: stretch;
+  margin-top: .25rem;
+  
+  display: flex;
+  align-items: center;
+
+  .BookProgress__bar {
+    flex-grow: 1;
+    height: 4px;
+    border-radius: 99px;
+    // margin-top: .4rem;
+    margin-right: .5rem;
+
+    background-color: var(--ios-color-gray-5);
+
+    .BookProgress__bar-fill {
+      width: 50px;
+      height: 100%;
+      border-radius: 99px;
+
+      background-color: var(--ios-color-green);
+    }
+  }
+
+  p {
+    font-weight: 500;
+    color: var(--ios-color-green);
+  }
+}

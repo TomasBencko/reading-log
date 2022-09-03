@@ -1,0 +1,29 @@
+
+.BookThumbnail {
+  $height: 6rem;
+  height: $height;
+  width: $height * 0.66;
+
+  margin-right: .75rem;
+  border-radius: .35rem;
+  overflow: hidden;
+  
+  .BookThumbnail__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &.BookThumbnail--missing {
+    background-color: var(--ion-color-step-50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .BookThumbnail--missing-icon {
+      color: var(--ion-color-step-150);
+      font-size: 2rem;
+    }
+  }
+}

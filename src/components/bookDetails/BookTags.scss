@@ -1,0 +1,16 @@
+
+.BookTags {
+  margin-top: .25rem;
+  display: flex;
+  
+  .BookTags__tag {
+    margin-right: .375rem;
+    display: inline-block;
+    padding: .25rem .5rem;
+
+    border-radius: .25rem;
+    background-color: var(--ios-color-gray-6);
+    font-size: var(--font-smaller);
+    color: var(--ios-color-gray);
+  }
+}

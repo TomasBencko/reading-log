@@ -2,7 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
-import './starRating.scss'
+import './StarRating.scss'
 
 export default function StarRating({ rating }) {
 

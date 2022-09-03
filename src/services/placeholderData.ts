@@ -1,4 +1,8 @@
-const books = [
+
+import type { BookList } from '../common/types'
+
+
+const books: BookList = [
 	{
 		googleID: 'FmyBAwAAQBAJ',
     urlSlug: 'sapiens',
@@ -18,9 +22,9 @@ const books = [
 		// User defined
 		categories: [],
 		tags: [ 'World', 'Science' ],
-		boughtForPrice: '',
-		startsOnPage: 0,
-		endsOnPage: 281,
+		boughtForPrice: 0,
+		pageStarts: 9,
+		pageEnds: 450,
 		isFinished: true,
 		userRating: 5,
     priority: 0,
@@ -69,9 +73,9 @@ const books = [
 		// User defined
 		categories: [],
 		tags: [ 'Productivity' ],
-		boughtForPrice: '',
-		startsOnPage: 0,
-		endsOnPage: 281,
+		boughtForPrice: 0,
+		pageStarts: 5,
+		pageEnds: 281,
 		isFinished: false,
 		userRating: 3.5,
     priority: 3,
@@ -120,9 +124,9 @@ const books = [
 		// User defined
 		categories: [],
 		tags: [ 'Psychology' ],
-		boughtForPrice: '',
-		startsOnPage: 0,
-		endsOnPage: 281,
+		boughtForPrice: 0,
+		pageStarts: 10,
+		pageEnds: 430,
 		isFinished: false,
 		userRating: 3,
     priority: 2,
@@ -171,9 +175,9 @@ const books = [
 		// User defined
 		categories: [],
 		tags: [ 'Productivity', 'Biography' ],
-		boughtForPrice: '',
-		startsOnPage: 0,
-		endsOnPage: 281,
+		boughtForPrice: 0,
+		pageStarts: 5,
+		pageEnds: 585,
 		isFinished: false,
 		userRating: 2.5,
     priority: 1,
@@ -222,9 +226,9 @@ const books = [
 		// User defined
 		categories: [],
 		tags: [ 'Biography' ],
-		boughtForPrice: '',
-		startsOnPage: 0,
-		endsOnPage: 281,
+		boughtForPrice: 0,
+		pageStarts: 0,
+		pageEnds: 281,
 		isFinished: false,
 		userRating: 0,
     priority: -1,

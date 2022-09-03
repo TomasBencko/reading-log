@@ -1,4 +1,13 @@
 
+/* Usage:
+<div className="ProgressCircle">
+  <ProgressCricle completion={completion} />
+  <span>{completion}%</span>
+</div>
+*/
+
+import './ProgressCircle.scss'
+
 export default function ProgressCricle({ completion }) {
 
 /*
@@ -42,7 +51,7 @@ export default function ProgressCricle({ completion }) {
 
   return (
   
-    <div>
+    <div className='ProgressCircle'>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
         width={width}
         height={width}
