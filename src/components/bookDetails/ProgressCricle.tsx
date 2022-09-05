@@ -9,7 +9,7 @@
 
 import './ProgressCircle.scss'
 
-export default function ProgressCricle({ completion }) {
+export default function ProgressCricle({ completion }: Props) {
 
 /*
   <ActionProgress 
@@ -86,4 +86,8 @@ export default function ProgressCricle({ completion }) {
       <div className='ProgressCircle__slot'>%</div>
     </div>
   )
+}
+
+interface Props {
+  completion: number
 }

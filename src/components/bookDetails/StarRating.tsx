@@ -4,7 +4,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 import './StarRating.scss'
 
-export default function StarRating({ rating }) {
+export default function StarRating({ rating }: Props) {
 
   let ratingStarsJSX = []
 
@@ -34,6 +34,9 @@ export default function StarRating({ rating }) {
   return <div className="StarRating">{ratingStarsJSX}</div>
 }
 
+interface Props {
+  rating: number
+}
 
 
 //  DEPRECIATED  Using empty and half icons
