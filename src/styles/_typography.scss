@@ -14,8 +14,18 @@
   // line-height: 1.5em;
 }
 
-p {
+p { // Body
+  font-size: var(--font-body);
+  font-weight: 400;
+  letter-spacing: -0.41px;
   // margin-bottom: .25rem; // 4px
+}
+
+.caption {
+  font-size: var(--font-caption-1);
+  letter-spacing: var(--font-spacing-wide);
+  color: var(--ios-color-gray);
+  // text-transform: uppercase;
 }
 
 a {
@@ -23,33 +33,38 @@ a {
   color: var(--ion-color-primary, #3880ff);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
-}
-h1 {
-  font-size: 1.75rem; // 28px // 26px originally
+h1 { // Large Title
+  font-size: var(--font-title-large);
   font-weight: 700;
+  letter-spacing: 0.37px;
 }
-h2 {
-  font-size: 24px;
+h2 { // Title 1
+  font-size: var(--font-title-1);
+  font-weight: 700;
+  letter-spacing: 0.36px;
 }
-h3 {
-  font-size: 22px;
-}
-
-h4 {
-  font-size: 20px;
-  // margin-bottom: .25rem; // 4px
-  // line-height: 24px;
-  // line-height: 1;
+h3 { // Title 2
+  font-size: var(--font-title-2);
+  font-weight: 700;
+  letter-spacing: 0.35px;
 }
 
-h5 {
-  font-size: 18px;
+h4 { // Title 3
+  font-size: var(--font-title-3);
+  font-weight: 600;
+  letter-spacing: 0.38px;
 }
 
-h6 {
-  font-size: 16px;
+h5 { // Headline
+  font-size: var(--font-headline);
+  font-weight: 600;
+  letter-spacing: -0.41px;
+}
+
+h6 { // Subheadline
+  font-size: var(--font-subheadline);
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 small {

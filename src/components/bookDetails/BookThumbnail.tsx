@@ -20,5 +20,6 @@ export default function BookThumbnail({ thumbnail }: Props) {
 }
 
 interface Props {
-  thumbnail: string
+  thumbnail: string,
+  height?: number
 }

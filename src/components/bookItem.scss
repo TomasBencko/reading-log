@@ -36,15 +36,19 @@
       .BookItem__title-text {
         flex-grow: 1;
         font-weight: 600;
-
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
         margin-right: .5rem;
-
+        overflow: hidden;
+        
         display: flex;
         align-items: center;
-
+        
+        span {
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        
         .icon__flag {
           font-size: .8em;
           margin-right: .375em;

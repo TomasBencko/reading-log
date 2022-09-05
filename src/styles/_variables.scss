@@ -11,22 +11,36 @@
   --screen-max-height: 24rem; // 384px
 
   // Fonts
-  --ion-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto", sans-serif;
+  --ion-font-family: "SF Compact Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto", sans-serif;
   
-  --font-huge: 4rem; // 64px +
-  --font-big: 1.5rem; // 24px +
-  --font-medium: 1.125rem; // 18px +
-  --font-base: 1rem; // 16px +
-  --font-small: 0.875rem; // 14px +
-  --font-smaller: 0.75rem; // 12px +
-  --font-tiny: 0.5rem; // 8px +
+  --font-title-large: 2.125rem; // 34px +
+  --font-title-1: 1.75rem; // 28px +
+  --font-title-2: 1.375rem; // 22px +
+  --font-title-3: 1.25rem; // 20px +
+  --font-headline: 1.0625rem; // 17px +
+  --font-body: 1.0625rem; // 17px +
+  --font-callout: 1rem; // 16px +
+  --font-subheadline: 0.9375rem; // 15px +
+  --font-footnote: 0.8125rem; // 13px +
+  --font-caption-1: 0.75rem; // 12px +
+  --font-caption-2: 0.6875rem; // 11px +
 
-  --font-spacing-narrow: -0.05em;
-  --font-spacing-wide: 0.1em;
+  --font-spacing-narrow: -0.025em; // 0.4px
+  --font-spacing-wide: 0.02em; // 0.3px
+  --font-spacing-wider: 0.05em; // 0.8px
 }
 
 
 :root {
+
+  --margin-paragraph: 1.5rem;
+  --margin-outer: 1rem;
+  --margin-inner: .5rem;
+  --margin-inner-half: .25rem;
+  --radius: .5rem;
+  --radius-half: .25rem;
+
+
   --ion-padding: 20px;
   --ion-margin: 20px;
 }
@@ -58,6 +72,7 @@
   --ion-color-background: #ffffff;
   --ion-color-background-rgb: 255,255,255;
 
+  --ion-text-color-inversed: #ffffff;
   --ion-text-color: #000000;
   --ion-text-color-rgb: 0,0,0;
 
@@ -121,6 +136,7 @@
     --ion-color-background: #000000;
     --ion-color-background-rgb: 0,0,0;
 
+    --ion-text-color-inversed: #000000;
     --ion-text-color: #ffffff;
     --ion-text-color-rgb: 255,255,255;
 

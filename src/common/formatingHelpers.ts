@@ -61,31 +61,12 @@ export function getRemainingTimeFormated(bookData: BookData) {
   return decimalToHours(getRemainingTime(bookData))
 }
 
-export function getRemainingPages(bookData: BookData) {
-  const pagesRead = getPagesRead(bookData)
-  const pageCount = bookData.pageCount
-  return pageCount - pagesRead
-}
-
 export function getRemainingSessions(bookData: BookData) {
   const readTime = getReadTime(bookData)
   const remainingTime = getRemainingTime(bookData)
   const numberOfSessions = bookData.sessions.length
   const averageSessionLengths = readTime / numberOfSessions
   return Math.ceil(remainingTime / averageSessionLengths)
-}
-
-export function getDateFinished(bookData: BookData) {
-  //  TODO  Make more robust (in a case sessions order is mixed)
-  return bookData.isFinished
-    ? bookData.sessions[0].date
-    : false
-}
-export function getDateFinishedFormated(bookData: BookData) {
-  const dateFinished = getDateFinished(bookData)
-  return dateFinished
-    ? moment(dateFinished).format('MMMM D, YYYY')
-    : false
 }
 
 export function getAverageEnergy(bookData: BookData) {
@@ -117,6 +98,30 @@ export function getPagesPerHour(bookData: BookData) {
 export function getMinutesPerPage(bookData: BookData) {
   const pagesPerHour = getPagesPerHour(bookData)
   return Math.round(60 / pagesPerHour * 10) / 10
+}
+
+export function getDateFinishedFormated(bookData: BookData) {
+  //  TODO  Make more robust (in a case sessions order is mixed)
+  if (bookData.isFinished) {
+    const dateFinished = bookData.sessions[0].date
+    return moment(dateFinished).format('MMMM D, YYYY')
+  } else { return false }
+}
+
+export function getDateStartedFormated(bookData: BookData) {
+  //  TODO  Make more robust (in a case sessions order is mixed)
+  const numberOfSessions = getNumberOfSessions(bookData)
+  if (numberOfSessions > 0) {
+    const dateStarted = bookData.sessions[numberOfSessions - 1].date
+    return moment(dateStarted).format('MMMM D, YYYY')
+  } else { return false }
+}
+
+export function getDateAddedFormated(bookData: BookData) {
+  const dateAdded = bookData.dateAdded
+  return dateAdded
+    ? moment(dateAdded).format('MMMM D, YYYY')
+    : false
 }
 
 

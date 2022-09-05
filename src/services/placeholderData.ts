@@ -28,6 +28,7 @@ const books: BookList = [
 		isFinished: true,
 		userRating: 5,
     priority: 0,
+    dateAdded: '2022-08-03',
 
 		/* SESSIONS */
 		sessions: [
@@ -79,6 +80,7 @@ const books: BookList = [
 		isFinished: false,
 		userRating: 3.5,
     priority: 3,
+    dateAdded: '2022-08-03',
 
 		/* SESSIONS */
 		sessions: [
@@ -123,13 +125,14 @@ const books: BookList = [
 
 		// User defined
 		categories: [],
-		tags: [ 'Psychology' ],
+		tags: [ 'Psychology', 'Productivity', 'Must read', 'Design' ],
 		boughtForPrice: 0,
 		pageStarts: 10,
 		pageEnds: 430,
 		isFinished: false,
 		userRating: 3,
     priority: 2,
+    dateAdded: '2022-08-03',
 
 		/* SESSIONS */
 		sessions: [
@@ -181,6 +184,7 @@ const books: BookList = [
 		isFinished: false,
 		userRating: 2.5,
     priority: 1,
+    dateAdded: '2022-08-03',
 
 		/* SESSIONS */
 		sessions: [
@@ -201,6 +205,58 @@ const books: BookList = [
 			{
 				date: '2022-08-22',
 				pagesRead: 70,
+				readTime: 1.07,
+				energy: .73,
+				enjoyment: .92,
+			},
+		],
+	},
+	{
+		googleID: 'WhOnoWS',
+    urlSlug: 'stoparov-sprievodca-galaxiou',
+
+		// Google API
+		title: 'Stopárov sprievodca galaxiou', 
+		authors: [ 'Douglas Adams' ],
+		pageCount: 186,
+		language: 'en',
+		yearPublished: 1995,
+		thumbnail: "https://data.bux.sk/book/092/061/0920617/large-stoparov_sprievodca_galaxiou.jpg",
+
+		// GoodReads API
+		averageRating: 3.87,
+		ratingsCount: 15782,
+
+		// User defined
+		categories: [],
+		tags: [ 'Fiction', 'Sci-Fi' ],
+		boughtForPrice: 0,
+		pageStarts: 0,
+		pageEnds: 281,
+		isFinished: false,
+		userRating: 0,
+    priority: 0,
+    dateAdded: '2022-08-03',
+
+		/* SESSIONS */
+		sessions: [
+			{
+				date: '2022-08-26',
+				pagesRead: 20,
+				readTime: 0.78,
+				energy: .65,
+				enjoyment: .8,
+			},
+			{
+				date: '2022-08-25',
+				pagesRead: 18,
+				readTime: 0.56,
+				energy: .6,
+				enjoyment: .7,
+			},
+			{
+				date: '2022-08-22',
+				pagesRead: 27,
 				readTime: 1.07,
 				energy: .73,
 				enjoyment: .92,
@@ -232,6 +288,7 @@ const books: BookList = [
 		isFinished: false,
 		userRating: 0,
     priority: -1,
+    dateAdded: '2022-08-03',
 
 		/* SESSIONS */
 		sessions: [

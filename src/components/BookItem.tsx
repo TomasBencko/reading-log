@@ -57,7 +57,7 @@ export default function BookItem({ bookData }: Props) {
           
           {/* Flag + book name */}
           <h4 className={`BookItem__title-text flag__${titleClass}`}>
-            {bookFlag}{bookData.title}
+            {bookFlag}<span>{bookData.title}</span>
           </h4>
 
           {/* User rating */}

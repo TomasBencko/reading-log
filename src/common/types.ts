@@ -23,6 +23,7 @@ export interface BookData {
   isFinished: boolean,
   userRating: number,
   priority: number,
+  dateAdded: string,
 
   sessions: SessionData[]
 }

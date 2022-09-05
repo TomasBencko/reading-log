@@ -1,11 +1,11 @@
 
 .BookThumbnail {
-  $height: 6rem;
-  height: $height;
-  width: $height * 0.66;
+  height: 6rem;
+  aspect-ratio: 2 / 3;
+  flex-shrink: 0;
 
-  margin-right: .75rem;
-  border-radius: .35rem;
+  margin-right: var(--margin-inner);
+  border-radius: var(--radius);
   overflow: hidden;
   
   .BookThumbnail__image {
