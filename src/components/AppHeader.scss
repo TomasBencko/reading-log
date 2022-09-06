@@ -1,0 +1,46 @@
+
+#AppHeader {
+  // width: 100%;
+  // padding: .5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--toolbar-height);
+
+  // Blurred background
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(245,245,245,.72); //  HARDCODED 
+
+  border-bottom: 1px solid var(--ion-border-color);
+  display: flex;
+  justify-content: center;
+
+
+  #toolbar {
+    height: 100%;
+    width: var(--screen-max-height);
+    // background-color: red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    h1 {
+      margin: 0 1rem;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+      // margin: .5rem 0;
+
+      flex-grow: 1;
+    }
+
+    .faIcon {
+      font-size: 1.75em;
+      color: var(--ion-color-light-shade);
+      margin: 0 1rem;
+    }
+  }
+}

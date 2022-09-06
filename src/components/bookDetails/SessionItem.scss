@@ -1,0 +1,55 @@
+
+.SessionItem {
+
+  margin-bottom: var(--margin-outer);
+  &:last-of-type { margin-bottom: 0; }
+  border-radius: var(--radius);
+
+  overflow: hidden;
+
+
+
+  .SessionItem__header {
+    padding: .5rem .75rem;
+    background-color: var(--ios-color-gray-5);
+    margin-bottom: 3px;
+    
+    background-color: var(--ios-color-blue);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+
+    h5 {
+      flex-grow: 1;
+    }
+
+    .header__add-button {
+      cursor: pointer;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+
+  .SessionItem__stats {
+    padding: .5rem .75rem 0;
+    background-color: var(--ios-color-gray-6);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+      min-width: 33%;
+      max-width: 33%;
+      margin-bottom: .5rem;
+      text-align: left;
+      // text-align: center;
+
+    }
+  }
+
+  
+}
