@@ -9,10 +9,10 @@ export default function App() {
   return (
     <>
 			{/* <AppPage /> */}
+			<AppHeader />
       <div className="PageWrapper">
         <Outlet />
       </div>
-			<AppHeader />
     </>
   )
 }
