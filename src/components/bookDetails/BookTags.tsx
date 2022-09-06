@@ -24,7 +24,7 @@ export default function BookTags({ tagList = [], editable = false }: Props) {
       {editable && 
       <div className="BookTags__tag">
         <div className='BookTags__add'>
-          <FontAwesomeIcon className='delete__icon' icon={faPlus} />
+          <FontAwesomeIcon className='add__icon' icon={faPlus} />
         </div>
       </div>
       }
