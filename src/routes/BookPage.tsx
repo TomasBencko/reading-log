@@ -107,8 +107,8 @@ export default function BookPage() {
       <div className='CapsuleWrapper'>
         <InfoCapsule caption='Click to add a quick note' width={5/6}         />
         <InfoCapsule icon={<FontAwesomeIcon className='add_note' icon={faFileAlt} />} width={1/6} />
-        <InfoCapsule content={<PrioritySetting priority={bookData.priority} isFinished={bookData.isFinished} />} />
-        <InfoCapsule content={<StarRating rating={bookData.userRating} />} />
+        <InfoCapsule content={<PrioritySetting priority={bookData.priority} isFinished={bookData.isFinished} />} width={1/2} />
+        <InfoCapsule content={<StarRating rating={bookData.userRating} />} width={1/2} />
         <InfoCapsule content={`${Math.round(completion * 100)}%`} caption='Completed' width={1/3} />
         <InfoCapsule content={numberOfSessions} caption='Sessions' width={1/3} />
         <InfoCapsule content={averageEnjoyment} caption='Enjoyment' width={1/3} />

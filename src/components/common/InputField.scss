@@ -1,0 +1,23 @@
+
+.InputField {
+  
+  flex-grow: 1;
+  min-width: 1rem;
+
+
+  font-style: italic;
+  font-size: var(--font-body);
+  letter-spacing: var(--font-spacing-narrow);
+
+  border: none;
+  outline: none;
+  border-radius: var(--radius);
+  background-color: var(--ios-color-gray-6);
+  padding: var(--margin-inner);
+
+  &::placeholder {
+    color: var(--ios-color-gray-3);
+    // letter-spacing: 0;
+    // font-size: var(--font-footnote);
+  }
+}

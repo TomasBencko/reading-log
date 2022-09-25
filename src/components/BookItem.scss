@@ -30,13 +30,13 @@
     .BookItem__title {
       display: flex;
       align-items: center;
-      margin-bottom: .25rem;
+      margin-bottom: var(--margin-inner-half);
       align-self: stretch;
       
       .BookItem__title-text {
         flex-grow: 1;
         font-weight: 600;
-        margin-right: .5rem;
+        margin-right: var(--margin-inner);
         overflow: hidden;
         
         display: flex;
@@ -60,7 +60,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      margin-bottom: .25rem;
+      margin-bottom: var(--margin-inner-half);
     }
   }
 }

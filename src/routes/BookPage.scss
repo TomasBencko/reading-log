@@ -40,7 +40,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
     }
 
 
@@ -87,7 +86,7 @@
   display: flex;
   align-items: center;
   margin-top: 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: var(--margin-inner);
   font-size: 1.275rem;
 
   span {
@@ -108,7 +107,7 @@
 
 
 .remaining-time {
-  margin-bottom: 1rem;
+  margin-bottom: var(--margin-outer);
   text-align: center;
 }
 
@@ -129,7 +128,7 @@
 
 
 .SessionItem__stats {
-  padding: .5rem .75rem 0;
+  padding: var(--margin-inner) .75rem 0;
   // background-color: var(--ios-color-gray-6);
 
   display: flex;
@@ -138,7 +137,7 @@
   div {
     min-width: 33%;
     max-width: 33%;
-    margin-bottom: .5rem;
+    margin-bottom: var(--margin-inner);
     text-align: center;
   }
 }
@@ -151,7 +150,7 @@
 
 .SessionItem__main-stats {
 
-  // padding: .5rem .75rem 0;
+  // padding: var(--margin-inner) .75rem 0;
   // background-color: var(--ios-color-gray-6);
 
   display: flex;

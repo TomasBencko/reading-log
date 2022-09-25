@@ -1,7 +1,7 @@
 
 .SessionItem {
 
-  margin-bottom: var(--margin-outer);
+  margin-bottom: var(--margin-inner);
   &:last-of-type { margin-bottom: 0; }
   border-radius: var(--radius);
 
@@ -10,7 +10,7 @@
 
 
   .SessionItem__header {
-    padding: .5rem .75rem;
+    padding: var(--margin-inner) .75rem;
     background-color: var(--ios-color-gray-5);
     margin-bottom: 3px;
     
@@ -35,7 +35,7 @@
   }
 
   .SessionItem__stats {
-    padding: .5rem .75rem 0;
+    padding: var(--margin-inner) .75rem 0;
     background-color: var(--ios-color-gray-6);
 
     display: flex;
@@ -44,7 +44,7 @@
     div {
       min-width: 33%;
       max-width: 33%;
-      margin-bottom: .5rem;
+      margin-bottom: var(--margin-inner);
       text-align: left;
       // text-align: center;
 

@@ -1,7 +1,7 @@
 
 .ButtonBase {
-  margin-top: .5rem;
-  margin-bottom: .5rem;
+  margin-top: var(--margin-inner);
+  margin-bottom: var(--margin-inner);
   width: 100%;
   flex-grow: 1;
   cursor: pointer;

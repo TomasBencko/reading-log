@@ -1,7 +1,7 @@
 
 import './InfoCapsule.scss'
 
-export default function InfoCapsule({ icon = null, content = null, caption = null, width = 1/2 }: Props) {
+export default function InfoCapsule({ icon = null, content = null, caption = null, width = 1 }: Props) {
 
 
   return (

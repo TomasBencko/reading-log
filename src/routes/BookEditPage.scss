@@ -1,0 +1,18 @@
+
+
+#BookEditPage {
+
+  h1 {
+    margin-bottom: var(--margin-inner);
+  }
+
+  .thumbnail-section {
+    display: flex;
+    flex-grow: 1;
+
+    .BookThumbnail {
+      height: 9rem;
+      width: calc(9rem / 3 * 2);
+    }
+  }
+}

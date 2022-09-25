@@ -1,7 +1,7 @@
 
 #AppHeader {
   // width: 100%;
-  // padding: .5rem;
+  // padding: var(--margin-inner);
   position: fixed;
   top: 0;
   left: 0;
@@ -28,11 +28,11 @@
     align-items: center;
     
     h1 {
-      margin: 0 1rem;
+      margin: 0 var(--margin-outer);
       // display: flex;
       // align-items: center;
       // justify-content: center;
-      // margin: .5rem 0;
+      // margin: var(--margin-inner) 0;
 
       flex-grow: 1;
     }
@@ -40,7 +40,7 @@
     .faIcon {
       font-size: 1.75em;
       color: var(--ion-color-light-shade);
-      margin: 0 1rem;
+      margin: 0 var(--margin-outer);
     }
   }
 }
