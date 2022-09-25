@@ -4,22 +4,19 @@ import placeholderData from '../services/placeholderData'
 import { getCompletion, getDateStartedFormated, getDateAddedFormated, getPagesRead, getReadTimeFormated, getRemainingSessions, getRemainingTimeFormated, getDateFinishedFormated, getAverageEnergyFormated, getAverageEnjoymentFormated, getPagesPerHour, getMinutesPerPage, getNumberOfSessions, getPageCount, getAuthors } from '../common/formatingHelpers'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faBookOpen, faStar, faCheckCircle, faCircleExclamation, faCircleQuestion, faFileAlt } from '@fortawesome/free-solid-svg-icons'
-import { faSquarePlus, faPenToSquare, faFlag, faCircleCheck, faNoteSticky, faClock } from '@fortawesome/free-regular-svg-icons'
+import { faPlus, faBookOpen, faStar, faFileAlt } from '@fortawesome/free-solid-svg-icons'
+import { faPenToSquare, faClock } from '@fortawesome/free-regular-svg-icons'
 
-
-
-import BookProgress from '../components/bookPage/BookProgress'
 import BookTags from '../components/bookPage/BookTags'
 import BookThumbnail from '../components/bookPage/BookThumbnail'
 import StarRating from '../components/bookPage/StarRating'
+import PrioritySetting from '../components/bookPage/PrioritySetting'
 import SessionItem from '../components/bookPage/SessionItem'
+import ProgressCricle from '../components/bookPage/ProgressCricle'
 import InfoCapsule from '../components/common/InfoCapsule'
+import ButtonBase from '../components/common/ButtonBase'
 
 import './BookPage.scss'
-import ProgressCricle from '../components/bookPage/ProgressCricle'
-
-
 
 
 export default function BookPage() {
@@ -33,8 +30,8 @@ export default function BookPage() {
 
 
   // Computed data
-    //  WARNING  Will be computed on every re-render
-    //  CONSIDER  To put this inside useMemo, or inside the bookData object as getters, or as a new Book class methods...
+  //  WARNING  Will be computed on every re-render
+  //  CONSIDER  To put this inside useMemo, or inside the bookData object as getters, or as a new Book class methods...
   const authors = getAuthors(bookData)
   const pageCount = getPageCount(bookData)
 	const pagesRead = getPagesRead(bookData)
@@ -53,16 +50,16 @@ export default function BookPage() {
   const ratingsCount = bookData.ratingsCount.toLocaleString('en-US')
 
 
-  //  TODO  Scroll to the top on init
-
-
   return (
     <>
 
+      {/* HEADING */}
       <h1 className='BookPage__title'>
         {bookData.title} ({bookData.yearPublished})
       </h1>
 
+
+      {/* BOOK DETAILS */}
       <div className='BookPage__cover'>
         <BookThumbnail thumbnail={bookData.thumbnail} />
 
@@ -79,33 +76,24 @@ export default function BookPage() {
       </div>
 
 
+      {/* CONTINUE READING BUTTON */}
       {!bookData.isFinished && 
-        <div className="continue-reading-2">
-          <div className='butttton'>
-            <FontAwesomeIcon className='Button__icon' icon={faBookOpen} />
-            Continue reading
-          </div>
-        </div>
+        <ButtonBase icon={faBookOpen} label='Continue reading' />
       }
 
+
+      {/* READING PROGRESS */}
       <div className='CapsuleWrapper'>
         <InfoCapsule
           icon={<ProgressCricle completion={completion} />}
-          content={`${pagesRead} / ${pageCount}`}
-          caption='Pages read'
-          capsulesPerRow={1/2}
+          content={`${pagesRead} / ${pageCount}`} caption='Pages read' width={1/2}
         />
         <InfoCapsule
           icon={<FontAwesomeIcon className='readTime_icon' icon={faClock} />}
-          content={readTime}
-          caption='Read time'
-          capsulesPerRow={1/2}
+          content={readTime} caption='Read time' width={1/2}
         />
       </div>
       
-
-
-
       {bookData.isFinished ? (
         <p className='bookItem--progress-text remaining-time'>Finished on {dateFinished}</p>
       ) : (
@@ -113,72 +101,33 @@ export default function BookPage() {
       )}
 
 
-
+      {/* BOOK STATS */}
       <h3 className='bookStats'>Book stats</h3>
 
-      
       <div className='CapsuleWrapper'>
-        <InfoCapsule
-          caption='Click to add a quick note'
-          capsulesPerRow={5/6}
-        />
-        <InfoCapsule
-          icon={<FontAwesomeIcon className='add_note' icon={faFileAlt} />}
-          capsulesPerRow={1/6}
-        />
-        <InfoCapsule
-          content={<>
-            <FontAwesomeIcon className="icon__flag flag__finished" icon={faCheckCircle} />
-            <FontAwesomeIcon className="icon__flag flag__priority_3" icon={faCircleExclamation} />
-            <FontAwesomeIcon className="icon__flag flag__priority_2" icon={faCircleExclamation} />
-            <FontAwesomeIcon className="icon__flag flag__priority_1" icon={faCircleExclamation} />
-            <FontAwesomeIcon className="icon__flag flag__unimportant" icon={faCircleQuestion} />
-          </>}
-        />
-        <InfoCapsule
-          content={<StarRating rating={bookData.userRating} />}
-        />
-        <InfoCapsule
-          content={`${Math.round(completion * 100)}%`}
-          caption='Completed'
-          capsulesPerRow={1/3}
-        />
-        <InfoCapsule
-          content={numberOfSessions}
-          caption='Sessions'
-          capsulesPerRow={1/3}
-        />
-        <InfoCapsule
-          content={averageEnjoyment}
-          caption='Enjoyment'
-          capsulesPerRow={1/3}
-        />
-        <InfoCapsule
-          content={`${pagesPerHour} p.`}
-          caption='Per hour'
-          capsulesPerRow={1/3}
-        />
-        <InfoCapsule
-          content={`${minutesPerPage} min`}
-          caption='Per page'
-          capsulesPerRow={1/3}
-        />
-        <InfoCapsule
-          content={averageEnergy}
-          caption='Energy'
-          capsulesPerRow={1/3}
-        />
+        <InfoCapsule caption='Click to add a quick note' width={5/6}         />
+        <InfoCapsule icon={<FontAwesomeIcon className='add_note' icon={faFileAlt} />} width={1/6} />
+        <InfoCapsule content={<PrioritySetting priority={bookData.priority} isFinished={bookData.isFinished} />} />
+        <InfoCapsule content={<StarRating rating={bookData.userRating} />} />
+        <InfoCapsule content={`${Math.round(completion * 100)}%`} caption='Completed' width={1/3} />
+        <InfoCapsule content={numberOfSessions} caption='Sessions' width={1/3} />
+        <InfoCapsule content={averageEnjoyment} caption='Enjoyment' width={1/3} />
+        <InfoCapsule content={`${pagesPerHour} p.`} caption='Per hour' width={1/3} />
+        <InfoCapsule content={`${minutesPerPage} min`} caption='Per page' width={1/3} />
+        <InfoCapsule content={averageEnergy} caption='Energy' width={1/3} />
       </div>
       
-
-
       <p className="BookPage__info omg">Book added on {dateAdded}</p>
       <p className="BookPage__info">Started reading on {dateStarted}</p>
+
+
+      {/* EDIT BOOK */}
       <div className="BookPage__edit-book">
         <FontAwesomeIcon className='title__icon' icon={faPenToSquare} /> Edit book
       </div>
 
 
+      {/* READING SESSIONS */}
 			<h4 className='sessions__title'>
         <span>Reading sessions ({numberOfSessions})</span>
         <FontAwesomeIcon className='title__icon' icon={faPlus} />

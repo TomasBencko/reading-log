@@ -53,12 +53,6 @@
           font-size: .8em;
           margin-right: .375em;
         }
-
-        &.flag__finished { color: var(--ios-color-green); }
-        &.flag__priority_1 { color: var(--ios-color-yellow); }
-        &.flag__priority_2 { color: var(--ios-color-orange); }
-        &.flag__priority_3 { color: var(--ios-color-red); }
-        &.flag__unimportant { color: var(--ios-color-gray-3); }
       }
     }
 

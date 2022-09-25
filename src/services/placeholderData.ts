@@ -27,7 +27,7 @@ const books: BookList = [
 		pageEnds: 450,
 		isFinished: true,
 		userRating: 5,
-    priority: 0,
+    priority: 2,
     dateAdded: '2022-08-03',
 
 		/* SESSIONS */

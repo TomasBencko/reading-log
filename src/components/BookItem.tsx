@@ -1,7 +1,7 @@
 
 import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckCircle, faCircleExclamation, faCircleQuestion } from '@fortawesome/free-solid-svg-icons'
+import { faCheckCircle, faCircleUp, faCircleDown } from '@fortawesome/free-solid-svg-icons'
 import { getCompletionFormated, getDateFinishedFormated, getRemainingTimeFormated, getRemainingSessions } from '../common/formatingHelpers'
 import { BookData } from '../common/types'
 import './BookItem.scss'
@@ -30,13 +30,13 @@ export default function BookItem({ bookData }: Props) {
   let bookFlag, titleClass = null
   if (bookData.isFinished) {
     bookFlag = <FontAwesomeIcon className="icon__flag" icon={faCheckCircle} />
-    titleClass = 'finished'
+    titleClass = 'color_finished'
   } else if (bookData.priority >= 1) {
-    bookFlag = <FontAwesomeIcon className="icon__flag" icon={faCircleExclamation} />
-    titleClass = `priority_${bookData.priority}`
+    bookFlag = <FontAwesomeIcon className="icon__flag" icon={faCircleUp} />
+    titleClass = `color_priority_${bookData.priority}`
   } else if (bookData.priority === -1) {
-    bookFlag = <FontAwesomeIcon className="icon__flag" icon={faCircleQuestion} />
-    titleClass = 'unimportant'
+    bookFlag = <FontAwesomeIcon className="icon__flag" icon={faCircleDown} />
+    titleClass = 'color_unimportant'
   }
 
 
@@ -56,7 +56,7 @@ export default function BookItem({ bookData }: Props) {
         <div className='BookItem__title'>
           
           {/* Flag + book name */}
-          <h4 className={`BookItem__title-text flag__${titleClass}`}>
+          <h4 className={`BookItem__title-text ${titleClass}`}>
             {bookFlag}<span>{bookData.title}</span>
           </h4>
 

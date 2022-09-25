@@ -105,25 +105,7 @@
 }
 
 
-.continue-reading-2 {
 
-  margin-top: .5rem;
-  display: flex;
-  margin-bottom: .5rem;
-
-  flex-grow: 1;
-  width: 100%;
-
-
-  .butttton:first-of-type {
-    flex-grow: 1;
-    // margin-right: .5rem;
-  }
-
-  .butttton:last-of-type {
-    width: 40px;
-  }
-}
 
 .remaining-time {
   margin-bottom: 1rem;
@@ -137,35 +119,7 @@
 
 // MAKE COMPONENTS FROM THOSE
 
-.butttton {
-  cursor: pointer;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 14px 20px;
-  gap: 10px;
-
-  height: 40px;
-
-  background: var(--ios-color-blue);
-  border-radius: var(--radius);
-
-
-  color: var(--ion-text-color-inversed);
-  font-weight: 600;
-  font-size: 1.125rem;
-  letter-spacing: var(--font-spacing-narrow);
-
-  .Button__icon {
-    font-size: .9em;
-  }
-
-  &:hover {
-    opacity: .9;
-  }
-}
 
 .BookPage__info {
   text-align: center;
@@ -190,14 +144,6 @@
 }
 
 
-
-
-// .StarRating--star {
-//   margin-left: .05em;
-//   position: relative;
-  
-//   display: flex;
-  
 
 
 
@@ -228,19 +174,7 @@
   font-size: 1.85rem;
 }
 
-.icon__flag {
-  font-size: 1.4rem;
 
-  margin-right: .5ch;
-  &:last-of-type { margin-right: 0; }
-  
-
-  &.flag__finished { color: var(--ios-color-green); }
-  &.flag__priority_1 { color: var(--ios-color-yellow); }
-  &.flag__priority_2 { color: var(--ios-color-orange); }
-  &.flag__priority_3 { color: var(--ios-color-red); }
-  &.flag__unimportant { color: var(--ios-color-gray-3); }
-}
 
 
 .bookStats {

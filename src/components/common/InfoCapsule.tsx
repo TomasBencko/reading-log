@@ -1,13 +1,13 @@
 
 import './InfoCapsule.scss'
 
-export default function InfoCapsule({ icon = null, content = null, caption = null, capsulesPerRow = 1/2 }: Props) {
+export default function InfoCapsule({ icon = null, content = null, caption = null, width = 1/2 }: Props) {
 
 
   return (
     <div className='InfoCapsule capsule-3'
       style={{flexBasis: 
-        `calc(${capsulesPerRow * 100}% - var(--margin-inner))`
+        `calc(${width * 100}% - var(--margin-inner))`
       }}
     >
       {icon && <div className='InfoCapsule__icon'>{icon}</div>}
@@ -25,5 +25,5 @@ interface Props {
   icon?: any,
   content?: any,
   caption?: string | null,
-  capsulesPerRow?: number
+  width?: number
 }
