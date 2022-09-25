@@ -6,10 +6,10 @@ import { getCompletionFormated, getDateFinishedFormated, getRemainingTimeFormate
 import { BookData } from '../common/types'
 import './BookItem.scss'
 
-import StarRating from './bookDetails/StarRating'
-import BookThumbnail from './bookDetails/BookThumbnail'
-import BookTags from './bookDetails/BookTags'
-import BookProgress from './bookDetails/BookProgress'
+import StarRating from './bookPage/StarRating'
+import BookThumbnail from './bookPage/BookThumbnail'
+import BookTags from './bookPage/BookTags'
+import BookProgress from './bookPage/BookProgress'
 
 
 export default function BookItem({ bookData }: Props) {

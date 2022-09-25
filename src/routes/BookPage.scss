@@ -1,6 +1,6 @@
 
 
-.BookDetails__title {
+.BookPage__title {
   margin-bottom: var(--margin-inner);
   // text-align: center;
 }
@@ -8,7 +8,7 @@
 
 
 
-.BookDetails__cover {
+.BookPage__cover {
   display: flex;
 
   margin-bottom: var(--margin-inner);
@@ -167,7 +167,7 @@
   }
 }
 
-.BookDetails__info {
+.BookPage__info {
   text-align: center;
   font-size: var(--font-subheadline);
   color: var(--ios-color-gray);
@@ -248,7 +248,7 @@
   margin-bottom: var(--margin-inner);
 }
 
-.BookDetails__info {
+.BookPage__info {
   margin: var(--margin-inner-half);
 }
 
@@ -256,7 +256,7 @@
   margin-top: var(--margin-paragraph);
 }
 
-.BookDetails__edit-book {
+.BookPage__edit-book {
   cursor: pointer;
   text-align: center;
   margin-top: var(--margin-outer);

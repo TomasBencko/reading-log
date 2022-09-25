@@ -9,29 +9,32 @@ import { faSquarePlus, faPenToSquare, faFlag, faCircleCheck, faNoteSticky, faClo
 
 
 
-import BookProgress from '../components/bookDetails/BookProgress'
-import BookTags from '../components/bookDetails/BookTags'
-import BookThumbnail from '../components/bookDetails/BookThumbnail'
-import StarRating from '../components/bookDetails/StarRating'
-import SessionItem from '../components/bookDetails/SessionItem'
+import BookProgress from '../components/bookPage/BookProgress'
+import BookTags from '../components/bookPage/BookTags'
+import BookThumbnail from '../components/bookPage/BookThumbnail'
+import StarRating from '../components/bookPage/StarRating'
+import SessionItem from '../components/bookPage/SessionItem'
 import InfoCapsule from '../components/common/InfoCapsule'
 
-import './BookDetails.scss'
-import ProgressCricle from '../components/bookDetails/ProgressCricle'
+import './BookPage.scss'
+import ProgressCricle from '../components/bookPage/ProgressCricle'
 
 
 
 
-export default function BookDetails() {
+export default function BookPage() {
 
-  const params = useParams()
-  const bookData = placeholderData.find(book => book.urlSlug === params.urlSlug) // Move this to store
+  // Load the book data
+  const urlParams = useParams()
+  const bookData = placeholderData.find(book => book.urlSlug === urlParams.urlSlug) //  TODO  Move this to store
 
-  if (!bookData) return (<p>Book '{params.urlSlug}' not found</p>)
+  // Fallback if the book doesn't exist
+  if (!bookData) return (<p>Book '{urlParams.urlSlug}' not found</p>)
 
 
-
-  // Computed
+  // Computed data
+    //  WARNING  Will be computed on every re-render
+    //  CONSIDER  To put this inside useMemo, or inside the bookData object as getters, or as a new Book class methods...
   const authors = getAuthors(bookData)
   const pageCount = getPageCount(bookData)
 	const pagesRead = getPagesRead(bookData)
@@ -56,11 +59,11 @@ export default function BookDetails() {
   return (
     <>
 
-      <h1 className='BookDetails__title'>
+      <h1 className='BookPage__title'>
         {bookData.title} ({bookData.yearPublished})
       </h1>
 
-      <div className='BookDetails__cover'>
+      <div className='BookPage__cover'>
         <BookThumbnail thumbnail={bookData.thumbnail} />
 
         <div className="cover__details">
@@ -70,34 +73,20 @@ export default function BookDetails() {
             {bookData.averageRating}
             <span className='bookRating__reviews'> ({ratingsCount} reviews)</span>
           </p>
-          {/* <BookTags tagList={bookData.authors} /> */}
 
           <BookTags tagList={bookData.tags} editable={true} />
-          {/* <BookProgress completion={Math.round(completion*100)+'%'} /> */}
-
-          
-          {/* <div className='cover__userRating'></div> */}
-
-          
-
-          {/* {!bookData.isFinished && 
-            <div className='butttton'>
-              <FontAwesomeIcon className='Button__icon' icon={faBookOpen} />
-              Continue reading
-            </div>
-          } */}
         </div>
       </div>
 
 
       {!bookData.isFinished && 
-            <div className="continue-reading-2">
-              <div className='butttton'>
-                <FontAwesomeIcon className='Button__icon' icon={faBookOpen} />
-                Continue reading
-              </div>
-            </div>
-          }
+        <div className="continue-reading-2">
+          <div className='butttton'>
+            <FontAwesomeIcon className='Button__icon' icon={faBookOpen} />
+            Continue reading
+          </div>
+        </div>
+      }
 
       <div className='CapsuleWrapper'>
         <InfoCapsule
@@ -183,9 +172,9 @@ export default function BookDetails() {
       
 
 
-      <p className="BookDetails__info omg">Book added on {dateAdded}</p>
-      <p className="BookDetails__info">Started reading on {dateStarted}</p>
-      <div className="BookDetails__edit-book">
+      <p className="BookPage__info omg">Book added on {dateAdded}</p>
+      <p className="BookPage__info">Started reading on {dateStarted}</p>
+      <div className="BookPage__edit-book">
         <FontAwesomeIcon className='title__icon' icon={faPenToSquare} /> Edit book
       </div>
 

@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import App from './App'
-import BookList from './components/BookList'
-import BookEdit from './routes/BookEdit'
-import BookDetails from './routes/BookDetails'
+import BookListPage from './routes/BookListPage'
+import BookEditPage from './routes/BookEditPage'
+import BookPage from './routes/BookPage'
 
 import './styles/main.scss'
 
@@ -14,9 +14,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />}>
-          <Route index element={<BookList />} />
-          <Route path='/add' element={<BookEdit />} />
-          <Route path='/book/:urlSlug' element={<BookDetails />} />
+          <Route index element={<BookListPage />} />
+          <Route path='/add' element={<BookEditPage />} />
+          <Route path='/book/:urlSlug' element={<BookPage />} />
           <Route path='*' element={<p>404</p>} />
         </Route>
       </Routes>
